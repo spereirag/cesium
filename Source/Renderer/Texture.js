@@ -451,9 +451,13 @@ define([
         if (source.arrayBufferView) {
             gl.texSubImage2D(target, 0, xOffset, yOffset, source.width, source.height, this._pixelFormat, this._pixelDatatype, source.arrayBufferView);
         } else {
-            gl.texSubImage2D(target, 0, xOffset, yOffset, this._pixelFormat, this._pixelDatatype, source);
+            if(xOffset == 0 && yOffset == 0){
+                gl.texImage2D(target, 0, this._pixelFormat, this._pixelFormat, this._pixelDatatype, source);
+            }else{
+                gl.texSubImage2D(target, 0, xOffset, yOffset, this._pixelFormat, this._pixelDatatype, source);
+            }
         }
-
+        
         gl.bindTexture(target, null);
     };
 
