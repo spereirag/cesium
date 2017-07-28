@@ -1,6 +1,6 @@
 {
   "name": "cesium-tsunamilab",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Cesium is a JavaScript library for creating 3D globes and 2D maps in a web browser without a plugin. This a fork fixing issue #4935 on the official cesium repository.",
   "homepage": "http://cesiumjs.org",
   "license": "Apache-2.0",
